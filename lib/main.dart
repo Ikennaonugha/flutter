@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'image_grid.dart';
 
 void main() {
-  runApp(const GambleDice());
+  runApp(const MyApp());
 }
 
-class GambleDice extends StatelessWidget {
-  const GambleDice ({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: ImageGrid(),
+    );
   }
 }
