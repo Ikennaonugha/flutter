@@ -33,7 +33,7 @@ class ImageGrid extends StatelessWidget {
       body: GridView.count(
         crossAxisCount: 2,
         children: imagePaths
-            .map<Widget>((String path) => Image.asset(path))
+            .map((String path) => Image.asset(path))
             .toList(),
       ),
     );

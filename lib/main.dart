@@ -1,18 +1,25 @@
 import 'package:flutter/material.dart';
-import 'image_grid.dart';
+import 'register.dart';
+import 'screens/home.dart';
+import 'image_grid.dart'; // Adjust file name to match your project
 
 void main() {
-  runApp(const MyApp());
+  runApp(const LoginApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class LoginApp extends StatelessWidget {
+  const LoginApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ImageGrid(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const RegisterScreen(),
+        '/home': (context) => const GambleDice(),
+        '/grid': (context) => const ImageGrid(),
+      },
     );
   }
 }
