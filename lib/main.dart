@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'register.dart';
 import 'screens/home.dart';
-import 'image_grid.dart'; // Adjust file name to match your project
+import 'image_grid.dart';
 
 void main() {
-  runApp(const LoginApp());
+  runApp(const GambleDice());
 }
 
-class LoginApp extends StatelessWidget {
-  const LoginApp({super.key});
+
+class GambleDice extends StatelessWidget {
+  const GambleDice({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +16,7 @@ class LoginApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => const RegisterScreen(),
-        '/home': (context) => const GambleDice(),
+        '/': (context) => const GambleDice(),
         '/grid': (context) => const ImageGrid(),
       },
     );
