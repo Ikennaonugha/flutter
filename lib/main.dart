@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
-import 'screens/home.dart';
-import 'image_grid.dart';
+import 'screens/login.dart';
+
 
 void main() {
-  runApp(const GambleDice());
+ runApp(const MyApp());
 }
 
 
-class GambleDice extends StatelessWidget {
-  const GambleDice({super.key});
+class MyApp extends StatelessWidget {
+ const MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const GambleDice(),
-        '/grid': (context) => const ImageGrid(),
-      },
-    );
-  }
-}
+
+ // This widget is the root of your application.
+ @override
+ Widget build(BuildContext context) {
+   return MaterialApp(
+     title: 'Flutter Demo',
+     theme: ThemeData(
+       colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+     ),
+     home: FormScreen(),
+   );
+ }
